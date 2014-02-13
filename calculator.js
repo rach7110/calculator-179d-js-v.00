@@ -8,8 +8,9 @@ $(document).ready(function(){
   // alert("Works so far!");
 	$(':submit').click(function(){
   // alert("Works so far!");
-		var size = document.getElementById("building-size").value;
+		var size = document.getElementById("size").value;
+    var name = document.getElementById("name").value;
     // alert("Great!");
-    alert("You submitted: " + size + ". Is that correct?");
+    alert("Thanks, " + name + ". You submitted: " + size + " sqft. Is that correct?");
 	});
 });
