@@ -11,6 +11,20 @@ $(document).ready(function(){
 		var size = document.getElementById("size").value;
     var name = document.getElementById("name").value;
     // alert("Great!");
-    alert("Thanks, " + name + ". You submitted: " + size + " sqft. Is that correct?");
+    if(name.length == 0) {
+      alert("Please enter your name.");
+      return;
+    }
+    else if(parseInt(size) < 100000) {
+      alert("Building size must be larger than 100,000 sqft");
+    }
+    else if(size == "") {
+       alert("Please enter a building size");
+    }
+    else {
+      var size = parseInt(size)
+      alert(typeof size)
+      alert("Thanks, " + name + ". You submitted: " + size + " sqft.");
+    }
 	});
 });
