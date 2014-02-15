@@ -10,6 +10,7 @@ $(document).ready(function(){
   // alert("Works so far!");
 		var size = document.getElementById("size").value;
     var name = document.getElementById("name").value;
+    var lighting = document.getElementById("lighting").value;
     // alert("Great!");
     if(name.length == 0) {
       alert("Please enter your name.");
