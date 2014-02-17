@@ -8,9 +8,22 @@ $(document).ready(function(){
   // alert("Works so far!");
 		var size = document.getElementById("size").value;
     var name = document.getElementById("name").value;
+
+    var lighting = false;
+    var hvac = false;
+    var env = false;
     var lightingLength = $('input#lighting:checked').length;
     var hvacLength = $('input#hvac:checked').length;
     var envLength = $('input#env:checked').length;
+
+    var rateLighting = 0.60;
+    var rateHvac = 0.60;
+    var rateEnv = 0.60;
+
+    var benefitLighting = 0;
+    var benefitHvac = 0;
+    var benefitEnv = 0;
+    var totalBenefit = benefitLighting + benefitHvac + benefitEnv;
 
     // Checks the user entered a building size:
     if(size =="") {
@@ -24,31 +37,39 @@ $(document).ready(function(){
     } else if(name.length == 0) {
         alert("Please eneter your name");
         return;     
-    // } else {
-    //     var size = parseInt(size);
+    } else {
+        var size = parseInt(size);
     //     alert("Thanks, " + name + ". You submitted: " + size + " sqft.");
     };
 
 // Checks if the lighting checkbox is selected:
     // alert("('input#lighting:checked').length is:  " +  lightingLength);
     if (lightingLength > 0) {
-      alert("Lighting is checked!!");
-    } else {
-      alert('Lighting is NOT checked');
-    }
+      lighting = true;
+      benefitLighting = size * rateLighting;
+      alert("Lighting: $" + benefitLighting);
+    // } else {
+    //   alert('Lighting is NOT checked');
+    };
 // Checks if the HVAC checkbox is selected:
     // alert("('input#hvac:checked').length is:  " +  hvacLength);
     if (hvacLength > 0) {
-      alert("HVAC is checked!!");
-    } else {
-      alert('HVAC is NOT checked');
+      hvac = true;
+      alert("HVAC: " + hvac);
+    // } else {
+    //   alert('HVAC is NOT checked');
     };
 // Checks if the envelope checkbox is selected:
     // alert("('input#env:checked').length is:  " +  envLength);
     if(envLength > 0) {
-      alert("Envelope is checked!!");
-    } else {
-      alert('Envelope is NOT checked');
+      env = true
+      alert("Env: " + env);
+    // } else {
+    //   alert('Envelope is NOT checked');
     };
+
+
+
+
   });
 });
