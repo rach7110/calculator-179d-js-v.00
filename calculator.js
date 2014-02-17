@@ -4,7 +4,7 @@
 $(document).ready(function(){
 	event.preventDefault();
   // alert("Works so far!");
-  $('div#results').hide();
+  // $('div#results').hide();
 	$(':submit').click(function(){
   // alert("Works so far!");
     $('div#results').empty();
@@ -71,11 +71,11 @@ $(document).ready(function(){
     //   alert('Envelope is NOT checked');
     };
 
-    // alert("Total benefit for your buidling: $" + (benefitLighting + benefitHvac + benefitEnv));
+    if(lighting == false && hvac == false && env == false) {
+      alert("You must select at least one buidling efficiency to qualify");
+    } else {
     var totalBenefits = (benefitLighting + benefitHvac + benefitEnv);
     $('div#results').show().append('<strong>Your total potential tax beenfit: $ </strong>' + totalBenefits);
-
-
-
+    };
   });
 });

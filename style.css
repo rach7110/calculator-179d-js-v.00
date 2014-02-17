@@ -114,6 +114,9 @@ input.text {
 #energy-type img {
   max-width: 180px; }
 
+#results {
+  height: 80px; }
+
 #submit {
   text-align: center;
   background-color: #eeeeee;
