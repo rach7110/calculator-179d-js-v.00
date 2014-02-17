@@ -3,10 +3,7 @@
 // });
 $(document).ready(function(){
 	event.preventDefault();
-  // alert("Works so far!");
-  // $('div#results').hide();
 	$(':submit').click(function(){
-  // alert("Works so far!");
     $('div#results').empty();
 		var size = document.getElementById("size").value;
     var name = document.getElementById("name").value;
@@ -40,7 +37,6 @@ $(document).ready(function(){
         return;     
     } else {
         var size = parseInt(size);
-    //     alert("Thanks, " + name + ". You submitted: " + size + " sqft.");
     };
 
 // Checks if the lighting checkbox is selected:
@@ -48,27 +44,18 @@ $(document).ready(function(){
     if (lightingLength > 0) {
       lighting = true;
       benefitLighting = size * rateLighting;
-      // alert("Lighting: $" + benefitLighting);
-    // } else {
-    //   alert('Lighting is NOT checked');
     };
 // Checks if the HVAC checkbox is selected:
     // alert("('input#hvac:checked').length is:  " +  hvacLength);
     if (hvacLength > 0) {
       hvac = true;
       benefitHvac = size * rateHvac;
-      // alert("HVAC: $" + benefitHvac);
-    // } else {
-    //   alert('HVAC is NOT checked');
     };
 // Checks if the envelope checkbox is selected:
     // alert("('input#env:checked').length is:  " +  envLength);
     if(envLength > 0) {
       env = true;
       benefitEnv = size * rateEnv;
-      // alert("Env: $" + benefitEnv);
-    // } else {
-    //   alert('Envelope is NOT checked');
     };
 
     if(lighting == false && hvac == false && env == false) {
