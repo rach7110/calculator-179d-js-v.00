@@ -55,15 +55,17 @@ $(document).ready(function(){
     // alert("('input#hvac:checked').length is:  " +  hvacLength);
     if (hvacLength > 0) {
       hvac = true;
-      alert("HVAC: " + hvac);
+      benefitHvac = size * rateHvac;
+      alert("HVAC: $" + benefitHvac);
     // } else {
     //   alert('HVAC is NOT checked');
     };
 // Checks if the envelope checkbox is selected:
     // alert("('input#env:checked').length is:  " +  envLength);
     if(envLength > 0) {
-      env = true
-      alert("Env: " + env);
+      env = true;
+      benefitEnv = size * rateEnv;
+      alert("Env: " + benefitEnv);
     // } else {
     //   alert('Envelope is NOT checked');
     };
