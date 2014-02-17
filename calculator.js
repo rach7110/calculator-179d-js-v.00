@@ -23,7 +23,6 @@ $(document).ready(function(){
     var benefitLighting = 0;
     var benefitHvac = 0;
     var benefitEnv = 0;
-    var totalBenefit = benefitLighting + benefitHvac + benefitEnv;
 
     // Checks the user entered a building size:
     if(size =="") {
@@ -65,11 +64,12 @@ $(document).ready(function(){
     if(envLength > 0) {
       env = true;
       benefitEnv = size * rateEnv;
-      alert("Env: " + benefitEnv);
+      alert("Env: $" + benefitEnv);
     // } else {
     //   alert('Envelope is NOT checked');
     };
 
+    alert("Total benefit for your buidling: $" + (benefitLighting + benefitHvac + benefitEnv));
 
 
 
