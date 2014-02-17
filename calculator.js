@@ -4,8 +4,10 @@
 $(document).ready(function(){
 	event.preventDefault();
   // alert("Works so far!");
+  $('div#results').hide();
 	$(':submit').click(function(){
   // alert("Works so far!");
+    $('div#results').empty();
 		var size = document.getElementById("size").value;
     var name = document.getElementById("name").value;
 
@@ -46,7 +48,7 @@ $(document).ready(function(){
     if (lightingLength > 0) {
       lighting = true;
       benefitLighting = size * rateLighting;
-      alert("Lighting: $" + benefitLighting);
+      // alert("Lighting: $" + benefitLighting);
     // } else {
     //   alert('Lighting is NOT checked');
     };
@@ -55,7 +57,7 @@ $(document).ready(function(){
     if (hvacLength > 0) {
       hvac = true;
       benefitHvac = size * rateHvac;
-      alert("HVAC: $" + benefitHvac);
+      // alert("HVAC: $" + benefitHvac);
     // } else {
     //   alert('HVAC is NOT checked');
     };
@@ -64,12 +66,14 @@ $(document).ready(function(){
     if(envLength > 0) {
       env = true;
       benefitEnv = size * rateEnv;
-      alert("Env: $" + benefitEnv);
+      // alert("Env: $" + benefitEnv);
     // } else {
     //   alert('Envelope is NOT checked');
     };
 
-    alert("Total benefit for your buidling: $" + (benefitLighting + benefitHvac + benefitEnv));
+    // alert("Total benefit for your buidling: $" + (benefitLighting + benefitHvac + benefitEnv));
+    var totalBenefits = (benefitLighting + benefitHvac + benefitEnv);
+    $('div#results').show().append('<strong>Your total potential tax beenfit: $ </strong>' + totalBenefits);
 
 
 
