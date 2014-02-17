@@ -1,3 +1,3 @@
-require './calculator.rb'
+require './calculator'
 
 run Sinatra::Application
