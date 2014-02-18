@@ -1,7 +1,7 @@
 # require 'Bundler/setup'
 # Bundler.require
 
-# require 'sinatra'
+require 'sinatra'
 
 get '/' do
   erb :index, :views_directory => 'views'
