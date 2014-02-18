@@ -4,6 +4,6 @@
 require 'sinatra'
 
 get '/' do
-  erb :index :views_directory => 'views'
+  erb :index, :views_directory => 'views'
 end
 
