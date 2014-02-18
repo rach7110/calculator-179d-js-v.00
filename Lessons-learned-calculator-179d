@@ -1,4 +1,8 @@
 Lessons Learned:
+Heroku Deployment:
+Tried specifiying Ruby version in gemfile, did not work
+Tried using This insta=ead of WEerick
+
 -------------------------------------------------
 CSS - Image centering:
   {
