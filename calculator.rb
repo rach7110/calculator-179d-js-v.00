@@ -3,14 +3,7 @@
 
 require 'sinatra'
 
-class MyApp < Sinatra::Base
-  configure do
-    set :views, 'views'
-    set :public_folder, 'public'
-  end
-end
-
 get '/' do
-  erb :index
+  erb :index :views_directory => 'views'
 end
 
