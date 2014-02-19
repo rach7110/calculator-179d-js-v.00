@@ -4,7 +4,7 @@
 require 'sinatra'
 
 get '/' do
-  erb :index
+  "hello world"
 end
 
 
