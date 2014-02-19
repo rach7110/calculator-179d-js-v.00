@@ -87,9 +87,7 @@ browser uses. This is the bread and butter of responsive web design.*/
 #header {
   height: 123px; }
 
-#banner {
-  height: 100%; }
-
+/*#banner {	height: 100%; }*/
 #banner img {
   margin: 0 auto;
   display: block; }
@@ -112,7 +110,8 @@ input.text {
   border: 1px dashed gray; }
 
 #energy-type img {
-  max-width: 180px; }
+  max-width: 180px;
+  padding-bottom: 10px; }
 
 #results {
   height: 80px; }

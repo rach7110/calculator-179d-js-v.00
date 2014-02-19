@@ -33,7 +33,7 @@ body {
 }
 
 .canvas {
-	background-image: url('images/background-image-179d.jpg')
+	background-image: url('background-image-179d.jpg')
 }
 
 .container, #header {
@@ -139,7 +139,10 @@ input.text {
 	text-align: center;
 	border: 1px dashed gray;
 }
-#energy-type img{ max-width: 180px; }
+#energy-type img{ 
+	max-width: 180px;
+	padding-bottom: 10px;
+ }
 
 #results {
 	height: 80px;
