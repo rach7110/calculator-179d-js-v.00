@@ -16,7 +16,7 @@ Borders and padding are drawn inside the set width of your content. The margin i
   color: #666666; }
 
 .canvas {
-  background-image: url("images/background-image-179d.jpg"); }
+  background-image: url("background-image-179d.jpg"); }
 
 .container, #header {
   margin: 0 auto;
