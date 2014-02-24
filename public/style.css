@@ -18,7 +18,7 @@ Borders and padding are drawn inside the set width of your content. The margin i
 .canvas {
   background-image: url("background-image-179d.jpg"); }
 
-.container, #header {
+#main, #header {
   margin: 0 auto;
   max-width: 1216px;
   /*height: 100%;*/
@@ -98,7 +98,7 @@ browser uses. This is the bread and butter of responsive web design.*/
   color: gray;
   text-align: left; }
 
-#building-size {
+#user-inputs {
   text-align: center;
   border: 1px dashed gray; }
 
